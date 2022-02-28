@@ -1,4 +1,4 @@
-class Api::V1::MembersController < ApplicationController
+class MembersController < ApplicationController
   before_action :authenticate_user!
 
   def show
