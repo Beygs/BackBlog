@@ -5,7 +5,13 @@ class ArticlesController < ApplicationController
 
   # GET /articles
   def index
-    @articles = Article.all
+    if user_signed_in
+      @articles = Article.where(status: "public").or(
+        Article.where(status: "private", user: User.first)
+      )
+    else
+      @articles = Article.where(status: "public")
+    end
 
     render json: @articles
   end

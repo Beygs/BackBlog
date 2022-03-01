@@ -8,8 +8,8 @@
 
 require "faker"
 
-User.destroy_all
 Article.destroy_all
+User.destroy_all
 
 10.times do
   User.create(
