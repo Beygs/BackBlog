@@ -52,3 +52,5 @@ gem "devise-jwt", "~> 0.9.0"
 gem "rack-cors", "~> 1.1"
 
 gem "faker", "~> 2.19"
+
+gem "aws-sdk-s3", require: false

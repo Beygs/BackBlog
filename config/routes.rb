@@ -6,8 +6,11 @@ Rails.application.routes.draw do
     registrations: "users/registrations"
   }
 
-  resources :articles
   get "/member-data", to: "members#show"
+
+  resources :articles do
+    resources :pictures
+  end
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
