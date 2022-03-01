@@ -39,6 +39,7 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   def destroy
     @article.destroy
+    render json: { message: "Article destroyed" }, status: :ok
   end
 
   private
