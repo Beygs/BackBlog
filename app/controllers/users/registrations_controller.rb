@@ -11,7 +11,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def register_success
     render json: {
-      message: 'Signed up sucessfully.',
+      message: 'Signed up successfully.',
       user: current_user
     }, status: :ok
   end

@@ -4,4 +4,5 @@ class Article < ApplicationRecord
   validates :status, acceptance: { accept: [ "public", "private" ] }
 
   belongs_to :user
+  has_many :comments
 end
